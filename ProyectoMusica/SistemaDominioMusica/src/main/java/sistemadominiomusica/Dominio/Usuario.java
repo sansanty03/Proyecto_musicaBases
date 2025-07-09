@@ -18,6 +18,7 @@ public class Usuario {
     private String contrasenia;
     private String imagenPerfil;
     private List<String> restricciones;
+     private List<Favorito> favoritos;
 
     public Usuario() {
     }
@@ -76,6 +77,14 @@ public class Usuario {
 
     public void setRestricciones(List<String> restricciones) {
         this.restricciones = restricciones;
+    }
+
+    public List<Favorito> getFavoritos() {
+        return favoritos;
+    }
+
+    public void setFavoritos(List<Favorito> favoritos) {
+        this.favoritos = favoritos;
     }
     
     

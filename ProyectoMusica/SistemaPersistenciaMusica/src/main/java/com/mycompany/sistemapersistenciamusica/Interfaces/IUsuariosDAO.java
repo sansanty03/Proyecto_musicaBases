@@ -7,7 +7,9 @@ package com.mycompany.sistemapersistenciamusica.Interfaces;
 import java.util.Date;
 import java.util.List;
 import org.bson.Document;
+import sistemadominiomusica.Dominio.Favorito;
 import sistemadominiomusica.Dominio.Usuario;
+import sistemadominiomusica.MusicaDtos.FavoritoDTO;
 import sistemadominiomusica.MusicaDtos.UsuarioDTO;
 
 /**
@@ -30,4 +32,14 @@ public interface IUsuariosDAO {
     public abstract void eliminarRestringido(String idUsuario, String genero);
     
     public abstract List<String> mostrarRestringidos(String idUsuario);
+    
+    public abstract boolean agregarFavorito(String idUsuario, FavoritoDTO favoritoDTO);
+    public abstract boolean eliminarFavorito(String idUsuario, String idContenido);
+    public abstract List<Document> obtenerAlbumesFavoritos(String idUsario, String nombreAlbum);
+    public abstract List<Document> obtenerArtistasFavoritos(String idUsuario, String nombreArtista);
+    public abstract List<Document> obtenerCancionesFavoritas(String idUsuario, String nombreCancion);
+    public abstract List<Document> obtenerGenerosFavoritos(String idUsuario, String genero);
+    public abstract List<Document> consultarFavoritosPorRangoFechas(String idUsuario, Date fechaInicio, Date fechaFin);
+    public abstract List<Document> obtenerTodosFavoritos(String idUsuario);
+    public abstract List<Favorito> consultarFavoritos(String idUsuario);
 }

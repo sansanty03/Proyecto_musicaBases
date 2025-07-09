@@ -19,11 +19,11 @@ import org.bson.codecs.pojo.PojoCodecProvider;
  * @author santi
  */
 public class ManejadorDeConexiones {
-    private static final String BASE_DATOS_PRUEBA = "bibliotecaMusicalPruebas";
+    private static final String BASE_DATOS = "bibliotecaMusical";
 
     public static MongoDatabase obtenerBaseDatos() {
         
-            return crearMongoDatabase(BASE_DATOS_PRUEBA);
+            return crearMongoDatabase(BASE_DATOS);
         
     }
 
