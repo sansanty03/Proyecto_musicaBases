@@ -7,15 +7,19 @@ package Fabricas;
 import Implementaciones.AlbumesBO;
 import Implementaciones.ArtistaBO;
 import Implementaciones.UsuariosBO;
+import Implementaciones.UtilidadBO;
 import Interfaces.IAlbumesBO;
 import Interfaces.IArtistasBO;
 import Interfaces.IUsuariosBO;
+import Interfaces.IUtilidadBO;
 import com.mycompany.sistemapersistenciamusica.Implementacion.AlbumesDAO;
 import com.mycompany.sistemapersistenciamusica.Implementacion.ArtistasDAO;
 import com.mycompany.sistemapersistenciamusica.Implementacion.UsuariosDAO;
+import com.mycompany.sistemapersistenciamusica.Implementacion.UtilidadDAO;
 import com.mycompany.sistemapersistenciamusica.Interfaces.IAlbumesDAO;
 import com.mycompany.sistemapersistenciamusica.Interfaces.IArtistasDAO;
 import com.mycompany.sistemapersistenciamusica.Interfaces.IUsuariosDAO;
+import com.mycompany.sistemapersistenciamusica.Interfaces.IUtilidadDAO;
 
 /**
  *
@@ -35,6 +39,11 @@ public class FabricaObjetosNegocio {
     public static IAlbumesBO crearAlbumesBO() {
         IAlbumesDAO albumesDAO = new AlbumesDAO();
         return new AlbumesBO(albumesDAO);
+    }
+    
+    public static IUtilidadBO crearUtilidadBO() {
+        IUtilidadDAO UtilidadDAO = new UtilidadDAO();
+        return new UtilidadBO(UtilidadDAO);
     }
 
 }
